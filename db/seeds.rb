@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Lesson.create(name: 'ruby basics')
-Lesson.create(name: 'ruby 101')
+Lesson.create(name: 'ruby basics', price: 20, location: 'Lisbon', description: 'abc')
+lesson = Lesson.create(name: 'ruby 101', price: 20, location: 'Lisbon', description: 'abc')
+
+Booking.create(date: Date.today)
+booking = Booking.create(date: Date.today)

@@ -28,6 +28,6 @@ class LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:name, :user_tutor_id)
+    params.require(:lesson).permit(:name)
   end
 end

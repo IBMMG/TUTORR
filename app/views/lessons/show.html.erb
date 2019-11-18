@@ -1,0 +1,9 @@
+ <div class="container">
+    <h1>Lesson: <%= @lesson.name %> </h1>
+</div>
+
+<p> <%= @lesson.price %> </p>
+<p> <%= @lesson.location %> </p>
+
+
+<%= link_to 'Add a Review', (@lesson), class: 'btn btn-primary newbutton' %>

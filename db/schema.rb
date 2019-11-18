@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_151439) do
+ActiveRecord::Schema.define(version: 2019_11_18_170708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,16 +18,32 @@ ActiveRecord::Schema.define(version: 2019_11_18_151439) do
   create_table "bookings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
+    t.bigint "lesson_id"
+    t.bigint "student_id"
+    t.index ["lesson_id"], name: "index_bookings_on_lesson_id"
+    t.index ["student_id"], name: "index_bookings_on_student_id"
   end
 
   create_table "lessons", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "description"
+    t.decimal "price"
+    t.string "location"
+    t.bigint "user_tutor_id"
+    t.index ["user_tutor_id"], name: "index_lessons_on_user_tutor_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "comment"
+    t.integer "stars"
+    t.bigint "booking_id"
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,8 +54,15 @@ ActiveRecord::Schema.define(version: 2019_11_18_151439) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "lessons"
+  add_foreign_key "bookings", "users", column: "student_id"
+  add_foreign_key "lessons", "users", column: "user_tutor_id"
+  add_foreign_key "reviews", "bookings"
 end

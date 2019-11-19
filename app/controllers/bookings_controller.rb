@@ -6,6 +6,9 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @lesson = Lesson.find(params[:lesson_id])
+
+    @booking.lesson = @lesson
   end
 
   def new
@@ -17,10 +20,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @lesson = Lesson.find(params[:lesson_id])
     @booking.lesson = @lesson
+    @booking.student = current_user
+
     if @booking.save
-      redirect_to lesson_path(@lesson)
+      redirect_to lesson_booking_path(@lesson, @booking)
     else
-      render 'lessons/show'
+      render :new
     end
   end
 
@@ -34,6 +39,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:lesson_id, :date)
+    params.require(:booking).permit(:lesson_id, :date, :id)
   end
 end

@@ -4,6 +4,9 @@
 
 <p> <%= @lesson.price %> </p>
 <p> <%= @lesson.location %> </p>
+<p> <%= @lesson.description%> </p>
+
 
 
 <%= link_to 'Add a Review', (@lesson), class: 'btn btn-primary newbutton' %>
+<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton" %>

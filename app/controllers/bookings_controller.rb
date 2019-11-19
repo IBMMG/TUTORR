@@ -1,5 +1,8 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.all
+  end
   def new
     @lesson = Lesson.find(params[:lesson_id])
     @booking = Booking.new

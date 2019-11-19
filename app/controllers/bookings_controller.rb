@@ -3,6 +3,11 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
   end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @lesson = Lesson.find(params[:lesson_id])
     @booking = Booking.new
@@ -31,7 +36,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:lesson_id, :date)
   end
-
-
-
 end

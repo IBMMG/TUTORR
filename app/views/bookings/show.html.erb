@@ -1,0 +1,23 @@
+
+
+
+<div class="container col-6 ">
+  <h1>YOUR BOOKING:</h1>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
+    <div class="card-header">
+      Booking:
+    </div>
+      <div class=" card-product-infos">
+
+        <h2>Lesson Name:<%= @booking.lesson.name.capitalize %> </h2>
+        <p>Date: <%= @booking.date %> </p>
+    </div>
+
+   <div class="card-body  d-flex justify-content-end">
+      <a href="/bookings" class="card-link btn btn-primary">Back to Bookings</a>
+    </div>
+
+  </div>
+</div>

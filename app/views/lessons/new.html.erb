@@ -1,10 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'background.png' %>);">
-  <div class="container">
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'background.jpg' %>);">
+  <div class="container ">
     <h1>Create your lesson:</h1>
   </div>
 </div>
 
-
+<div class="container">
 <p>
   <%= simple_form_for [@lesson] do |l| %>
     <%= l.input :name%>
@@ -14,7 +15,8 @@
     <%= l.submit class: "btn btn-primary newbutton" %>
   <% end %>
 </p>
-
-
 <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton" %>
+</div>
+
+
 

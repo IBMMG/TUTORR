@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(email: "email@gmail.com", password: "blahblah", first_name: "dasokf", last_name: "asdmasdasd", role:"student")
+student = User.create!(email: "student@gmail.com", password: "blahblah", first_name: "dasokf", last_name: "asdmasdasd", role:"student")
+tutor = User.create!(email: "tutor@gmail.com", password: "blahblah", first_name: "dasokf", last_name: "asdmasdasd", role:"tutor")
 
-Lesson.create(name: 'ruby basics', price: 20, location: 'Lisbon', description: 'abc')
-lesson = Lesson.create(name: 'ruby 101', price: 20, location: 'Lisbon', description: 'abc')
+lesson1 = Lesson.create!(name: 'ruby basics', price: 20, location: 'Lisbon', description: 'abc')
+lesson2 = Lesson.create!(name: 'ruby 101', price: 20, location: 'Lisbon', description: 'abc')
 
-Booking.create(date: Date.today)
-booking = Booking.create(date: Date.today, user: user.first)
+booking = Booking.create!(date: Date.today, student: student, lesson: lesson1 )

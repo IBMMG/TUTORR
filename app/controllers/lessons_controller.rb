@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
       if @lesson.save
-        redirect_to_ lesson_path(@lesson)
+        redirect_to lesson_path(@lesson)
       else
         render 'lessons/new'
       end
@@ -28,6 +28,6 @@ class LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:name, :user_tutor_id)
+    params.require(:lesson).permit(:name, :price, :description, :location)
   end
 end

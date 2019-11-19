@@ -16,7 +16,7 @@
 
     </div>
     <div class="card-body d-flex justify-content-end">
-      <%= link_to 'View details', booking_path(b), class: "btn btn-primary newbutton  " %>
+      <%= link_to 'View details', lesson_booking_path(b.lesson.id, b), class: "btn btn-primary newbutton  " %>
     </div>
 
   </div>

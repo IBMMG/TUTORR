@@ -1,17 +1,19 @@
-<h1>Make a booking</h1>
 
 
 <div class="container">
+  <h1>Make a booking</h1>
+
 <p>
   <%= simple_form_for [@lesson, @booking] do |f| %>
     <%= f.input :date%>
     <%= f.submit class: "btn btn-primary newbutton" %>
   <% end %>
 </p>
+<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton"  %>
+
 </div>
 
 
 
-<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton"  %>
 
 

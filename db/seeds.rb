@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Lesson.destroy_all
+Booking.destroy_all
+User.destroy_all
+
 student = User.create!(email: "students2@gmail.com", password: "blahblah", first_name: "dasokf", last_name: "asdmasdasd", role:"student")
 
 tutor = User.create!(email: "tutors2@gmail.com", password: "blahblah", first_name: "dasokf", last_name: "asdmasdasd", role:"tutor")

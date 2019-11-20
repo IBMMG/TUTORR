@@ -9,10 +9,14 @@
 <% @lessons.each do |lesson| %>
 <div class ="container col-6">
   <div class="card-product">
-    <%= image_tag 'code1', width:160, height:160%>
+    <% if lesson.photo? %>
+          <%= cl_image_tag lesson.photo, width:160, height:160 %>
+    <% else %>
+          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <% end %>
     <div class="card-product-infos">
       <h2><%= lesson.name %></h2>
-      <p><%= lesson.price %><strong>
+        <p><%= lesson.price %><strong>
         <p><%= lesson.location %></strong></p>
         <p><%= lesson.description %> </p>
       </div>

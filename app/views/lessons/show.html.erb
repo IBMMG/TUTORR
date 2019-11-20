@@ -2,11 +2,10 @@
     <h1>Lesson: <%= @lesson.name %> </h1>
 </div>
 
+<p> <%= cl_image_tag @lesson.photo, height: 300, width: 400, crop: :fill %> </p>
 <p> <%= @lesson.price %> </p>
 <p> <%= @lesson.location %> </p>
 <p> <%= @lesson.description%> </p>
-
-
 
 <%= link_to 'Add a Review', (@lesson), class: 'btn btn-primary newbutton' %>
 <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton" %>

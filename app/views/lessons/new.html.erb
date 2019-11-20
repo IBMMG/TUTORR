@@ -12,11 +12,10 @@
     <%= l.input :price%>
     <%= l.input :location%>
     <%= l.input :description%>
+    <%= l.input :photo %>
+    <%= l.input :photo_cache, as: :hidden %>
     <%= l.submit class: "btn btn-primary newbutton" %>
   <% end %>
 </p>
 <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton" %>
 </div>
-
-
-

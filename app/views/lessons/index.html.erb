@@ -11,13 +11,13 @@
   <div class="card-product">
     <%= image_tag 'code1', width:160, height:160%>
     <div class="card-product-infos">
-      <h2><%= lesson.name %></h2>
-      <p><%= lesson.price %><strong>
+      <h2><%= lesson.name.capitalize %></h2>
+      <p><%= lesson.price %> €<strong>
         <p><%= lesson.location %></strong></p>
-        <p><%= lesson.description %> </p>
-      </div>
+<!--         <p><%= lesson.description %> </p>
+ -->      </div>
       <div class="card-body d-flex justify-content-end">
-        <%= link_to 'View details', lesson_path(lesson), class: "btn btn-primary newbutton mr-3" %>
+        <%= link_to 'View details', lesson_path(lesson), class: "btn btn-outline-success newbutton mr-3" %>
         <%= link_to 'Book now', new_lesson_booking_path(lesson), class: "btn btn-primary newbutton "%>
       </div>
     </div>
@@ -25,7 +25,7 @@
   </div>
   <% end %>
 <div class="container d-flex justify-content-center">
-  <%= link_to 'Back to homepage', root_path, class: "btn btn-primary newbutton " %>
+  <%= link_to 'Back to homepage', root_path, class: "btn btn-outline-primary newbutton " %>
   </div>
 
 

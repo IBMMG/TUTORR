@@ -9,13 +9,15 @@
 <% @lessons.each do |lesson| %>
 <div class ="container col-6">
   <div class="card-product">
-    <%= image_tag 'code1', width:160, height:160%>
+    <%= image_tag 'code1.jpg', width:160, height:160%>
     <div class="card-product-infos">
       <h2><%= lesson.name.capitalize %></h2>
       <p><%= lesson.price %> €<strong>
         <p><%= lesson.location %></strong></p>
-<!--         <p><%= lesson.description %> </p>
- -->      </div>
+      </div>
+
+      </div>
+
       <div class="card-body d-flex justify-content-end">
         <%= link_to 'View details', lesson_path(lesson), class: "btn btn-outline-success newbutton mr-3" %>
         <%= link_to 'Book now', new_lesson_booking_path(lesson), class: "btn btn-primary newbutton "%>

@@ -1,4 +1,5 @@
 class Lesson < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   has_many :bookings
 
   validates :name, presence: true

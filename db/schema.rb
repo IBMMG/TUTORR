@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_18_170708) do
+ActiveRecord::Schema.define(version: 2019_11_20_120221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_11_18_170708) do
     t.decimal "price"
     t.string "location"
     t.bigint "user_tutor_id"
+    t.string "image"
+    t.string "photo"
     t.index ["user_tutor_id"], name: "index_lessons_on_user_tutor_id"
   end
 

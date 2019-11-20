@@ -9,12 +9,16 @@
 <% @lessons.each do |lesson| %>
 <div class ="container col-6">
   <div class="card-product">
-    <%= image_tag 'code1.jpg', width:160, height:160%>
+    <% if lesson.photo? %>
+          <%= cl_image_tag lesson.photo, width:160, height:160 %>
+    <% else %>
+          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <% end %>
     <div class="card-product-infos">
       <h2><%= lesson.name.capitalize %></h2>
       <p><%= lesson.price %> €<strong>
-        <p><%= lesson.location %></strong></p>
-      </div>
+      <p><%= lesson.location %></strong></p>
+    </div>
 
 
       <div class="card-body d-flex justify-content-end">

@@ -1,12 +1,31 @@
- <div class="container">
-    <h1>Lesson: <%= @lesson.name %> </h1>
+
+
+<div class="container col-6 ">
+  <h1>Lesson: <%= @lesson.name.capitalize %> </h1>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
+ <!--    <div class="card-header">
+      Booking:
+    </div> -->
+      <div class=" card-product-infos">
+        <h2> <%= @lesson.location %> </h2>
+        <h2> <%= @lesson.price %> € </h2>
+
+        <p> <%= @lesson.description%> </p>
+    </div>
+
+    <div class="card-body  d-flex justify-content-end">
+      <%= link_to 'Book now', new_lesson_booking_path(@lesson), class: "btn btn-outline-primary newbutton" %>
+    </div>
+
+  </div>
+
+<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton" %>
+
+<%= link_to 'Add a Review', (@lesson), class: 'btn btn-outline-primary newbutton' %>
+
+
 </div>
 
-<p> <%= @lesson.price %> </p>
-<p> <%= @lesson.location %> </p>
-<p> <%= @lesson.description%> </p>
 
-
-
-<%= link_to 'Add a Review', (@lesson), class: 'btn btn-primary newbutton' %>
-<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-primary newbutton" %>

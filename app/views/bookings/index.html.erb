@@ -9,11 +9,15 @@
 <% @bookings.each do |b| %>
 <div class ="container col-6">
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <% if b.lesson.photo? %>
+          <%= cl_image_tag b.lesson.photo, width:160, height:160 %>
+    <% else %>
+          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <% end %>
     <div class=" card-product-infos">
       <h2><%= b.lesson.name.capitalize %></h2>
       <p><%= b.date %>  </p>
-
+      <p>Price:  <strong> <%= b.lesson.price %> € </strong></p>
     </div>
     <div class="card-body d-flex justify-content-end">
       <%= link_to 'View details', lesson_booking_path(b.lesson.id, b), class: "btn btn-primary newbutton  " %>

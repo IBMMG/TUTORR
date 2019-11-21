@@ -2,8 +2,22 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show]
 
   def index
-    @lessons = Lesson.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @lessons = Lesson.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @lessons = Lesson.all
+    end
   end
+
+  # if params[:query].present?
+  #     sql_query = " \
+  #       lessons.title @@ :query \
+  #       OR lessons.syllabus @@ :query \
+  #       OR description.first_name @@ :query \
+  #       OR directors.last_name @@ :query \
+  #     "
+  #     @lessons = Lesson.joins(:description).where(sql_query, query: "%#{params[:query]}%")
 
   def show
   end

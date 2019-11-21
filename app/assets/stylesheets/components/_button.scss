@@ -6,4 +6,16 @@
 .button-search {
   border-radius: 20px;
   margin-left: 10px;
+
+}
+
+
+.search-field{
+  display: inline-flex; /* or inline-flex */
+  flex-direction: row;
+  width: 40rem;
+
+  form {
+    width: 40rem;
+  }
 }

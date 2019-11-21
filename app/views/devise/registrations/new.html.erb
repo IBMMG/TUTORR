@@ -1,38 +1,48 @@
-<div class="container col-6 mt-5">
-<h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card_sign_up">
+        <div class="card-body">
+          <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-inputs">
-     <%= f.input :first_name,
-                required: true,
-                autofocus: true %>
+          <div class="form-inputs">
+           <%= f.input :first_name,
+           required: true,
+           autofocus: true %>
 
-    <%= f.input :last_name,
-                required: true %>
+           <%= f.input :last_name,
+           required: true %>
 
-    <%= f.input :role,
-                required: true, collection: ['tutor', 'student'] %>
+           <%= f.input :role,
+           required: true, collection: ['tutor', 'student'] %>
 
-    <%= f.input :email,
-                required: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+           <%= f.input :email,
+           required: true,
+           input_html: { autocomplete: "email" }%>
+           <%= f.input :password,
+           required: true,
+           hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+           input_html: { autocomplete: "new-password" } %>
+           <%= f.input :password_confirmation,
+           required: true,
+           input_html: { autocomplete: "new-password" } %>
+         </div>
+
+         <div class="form-actions btn btn-outline-primary newbutton">
+          <%= f.button :submit, "Sign up" %>
+        </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
   </div>
+</div>
+</div>
 
-  <div class="form-actions btn btn-outline-primary newbutton">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-  <% end %>
-    <%= render "devise/shared/links" %>
-  </div>
+
 
 
 

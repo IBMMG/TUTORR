@@ -24,8 +24,7 @@ lesson7 = Lesson.create!(name: 'C++', price: 80, location: 'Lisbon', description
 lesson8 = Lesson.create!(name: 'SQL', price: 45, location: 'Porto', description: 'Learn basics of SQL')
 lesson9 = Lesson.create!(name: 'React', price: 55, location: 'Porto', description: 'Learn one of the most popular frameworks!')
 lesson10 = Lesson.create!(name: 'Angular', price: 55, location: 'Lisbon', description: 'Best framework with the best teacher')
-
-
+lesson11 = Lesson.create!(name: 'Angular', price: 75, location: 'Rua ', description: 'Best framework with the best teacher')
 
 booking = Booking.create!(date: Date.today, student: student, lesson: lesson1 )
 booking = Booking.create!(date: Date.today, student: student, lesson: lesson2 )

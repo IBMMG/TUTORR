@@ -26,7 +26,7 @@
 <!-- offset-2 -->
 
 <div class ="container">
-  
+
   <% if @lessons.any? %>
 
     <div class="row">
@@ -54,12 +54,12 @@
       </div>
 
       <div class="col-5">
-        <div id="map" style="height: 300px; width: 600px"></div>
+        <div id="map" style="height: 300px; width: 600px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= 'pk.eyJ1IjoiaWJtbWciLCJhIjoiY2szOGw0MWp1MDl2czNjcnRxZzJlZDB4diJ9.AcGFizvxSXA8jmm2hDFSKg' %>"></div>
       </div>
     </div>
 
   <% else %>
-    There are no lessons for your search criteria
+    No lessons available!
   <% end %>
 </div>
 

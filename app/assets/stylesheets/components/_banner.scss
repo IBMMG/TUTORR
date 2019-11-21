@@ -3,9 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  opacity: 0.9;
   margin-bottom: 4.5rem;
-
 
   h1 {
     margin: 0;
@@ -19,7 +17,6 @@
   p {
     font-size: 20px;
     color: white;
-    opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     text-align: center;
   }
@@ -32,4 +29,11 @@
 .banner a .btn{
   color: #CEE5F2;
 }
+
+#banner-typed-text {
+  font-size: 2rem;
+  height: 200px;
+  color: #FFFFFF;
+}
+
 

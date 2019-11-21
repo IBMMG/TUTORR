@@ -1,9 +1,6 @@
-
-
 .card {
   justify-content: space-between;
 }
-
 
 .card-product {
   overflow: hidden;
@@ -12,7 +9,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-
   margin:20px;
   margin-left: 0;
   border-radius: 7px;
@@ -24,14 +20,11 @@
   object-fit: cover;
 }
 
-
-
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-
 
 .card-product p {
   font-size: 12px;
@@ -41,13 +34,9 @@
   margin-top: 8px;
 }
 
-
-
-
 .card-product .card-product-infos {
   padding: 16px;
 }
-
 
 .card-link{
   color:#292929;
@@ -56,8 +45,6 @@
    border-color: purple;
   }
 }
-
-
 
 
 

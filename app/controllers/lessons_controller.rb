@@ -20,6 +20,8 @@ class LessonsController < ApplicationController
   #     @lessons = Lesson.joins(:description).where(sql_query, query: "%#{params[:query]}%")
 
   def show
+    @review = Review.new
+    @booking = Booking.where(lesson: @lesson, student: current_user).last
   end
 
   def create

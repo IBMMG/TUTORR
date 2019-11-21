@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :lessons do
-    resources :bookings
+    resources :bookings do
       resources :reviews
+    end
   end
 
 

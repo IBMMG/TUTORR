@@ -1,17 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card_booking">
+        <div class="card-body">
+          <h1>MAKE A BOOKING</h1>
 
-
-<div class="container col-6">
-  <h1>MAKE A BOOKING</h1>
-
-<p>
-  <%= simple_form_for [@lesson, @booking] do |f| %>
-    <%= f.input :date%>
-    <%= f.submit class: "btn btn-primary newbutton" %>
-  <% end %>
-</p>
-<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton"  %>
-
+          <p>
+            <%= simple_form_for [@lesson, @booking] do |f| %>
+            <%= f.input :date%>
+            <%= f.submit class: "btn btn-primary newbutton" %>
+            <% end %>
+          </p>
+          <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton"  %>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 
 

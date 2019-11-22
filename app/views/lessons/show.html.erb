@@ -1,4 +1,4 @@
-<div class="container col-6 ">
+<div class="container col-lg-6 ">
   <h1>Lesson: <%= @lesson.name %> </h1>
   <div class="card-product">
     <% if @lesson.photo? %>
@@ -13,15 +13,21 @@
 
       <p> <%= @lesson.description%> </p>
     </div>
-
-    <div class="card-body  d-flex justify-content-end">
+<!--       <video src="https://giphy.com/gifs/13UZisxBxkjPwI/html5"></video>
+ -->    <div class="card-body  d-flex justify-content-end">
       <%= link_to 'Book now', new_lesson_booking_path(@lesson), class: "btn btn-outline-primary newbutton" %>
     </div>
   </div>
 
-  <%= link_to 'Back to Lessons', lessons_path, class: "card-link btn btn-outline-success newbutton" %>
+  <div class="card-map">
+    <div id="map" style="height: 100vh; width: 100%; position: -webkit-sticky; top: 0px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= 'pk.eyJ1IjoiaWJtbWciLCJhIjoiY2szOGw0MWp1MDl2czNjcnRxZzJlZDB4diJ9.AcGFizvxSXA8jmm2hDFSKg' %>"></div>
+  </div>
+
+  <%= link_to 'Back to Lessons', lessons_path, class: "card-link btn btn-outline-success newbutton-1 offset-4.5" %>
 
 </div>
+
+
 
 <div class="container">
 
@@ -47,15 +53,15 @@
                 <input type="radio" id="star1" name="rate" value="1" />
                 <label for="star1" title="text">1 star</label>
               </div>
-              <div class="review-block-title">Review title</div>
-              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+              <div class="review-block-title">Great lesson</div>
+              <div class="review-block-description">I was completely amazed by the teaching style, and the material I learned in just two hours! :D</div>
             </div>
           </div>
           <hr/>
           <div class="row">
             <div class="col-sm-3">
-              <div class="review-block-name"><a href="#">Test</a></div>
-              <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+              <div class="review-block-name"><a href="#">Created</a></div>
+              <div class="review-block-date">November 21, 2019<br/>1 day ago</div>
             </div>
             <div class="col-sm-9">
               <div class="rate">
@@ -70,8 +76,8 @@
                 <input type="radio" id="star1" name="rate" value="1" />
                 <label for="star1" title="text">1 star</label>
               </div>
-              <div class="review-block-title">Review title</div>
-              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+              <div class="review-block-title">Not my favorite</div>
+              <div class="review-block-description">Although the teacher was good, I thought the material was not adequate</div>
             </div>
           </div>
         </div>

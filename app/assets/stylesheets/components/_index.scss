@@ -9,12 +9,13 @@
 @import "card";
 @import "search";
 @import "stars";
-
-
-body{
+@import "map"
+  
+body {
   height: 100%;
 }
 
 .center-p {
   text-align: center;
 }
+

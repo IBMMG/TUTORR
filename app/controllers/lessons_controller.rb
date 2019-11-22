@@ -6,16 +6,14 @@ class LessonsController < ApplicationController
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @lessons = Lesson.where(sql_query, query: "%#{params[:query]}%")
     else
-      @lessons = Lesson.all
-      @lessons.geocoded
-
-      @markers = @lessons.map do |lesson|
+      @lessons = Lesson.geocoded
+    end
+    @markers = @lessons.map do |lesson|
         {
           lat: lesson.latitude,
           lng: lesson.longitude,
           infoWindow: render_to_string(partial: "info_window", locals: {lesson: lesson})
         }
-      end
     end
   end
 

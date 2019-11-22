@@ -21,10 +21,8 @@ class LessonsController < ApplicationController
     @review = Review.new
     @booking = Booking.where(lesson: @lesson, student: current_user).last
 
-    @lesson = Lesson.find(params[:id])
     @markers = [{lat: @lesson.latitude, lng: @lesson.longitude}]
-
-end
+  end
 
   def create
     @lesson = Lesson.new(lesson_params)

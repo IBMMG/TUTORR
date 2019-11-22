@@ -2,9 +2,9 @@
   <h1>Lesson: <%= @lesson.name %> </h1>
   <div class="card-product">
     <% if @lesson.photo? %>
-          <%= cl_image_tag @lesson.photo, width:160, height:160 %>
+    <%= cl_image_tag @lesson.photo, width:160, height:160 %>
     <% else %>
-          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
     <% end %>
 
     <div class=" card-product-infos">
@@ -30,6 +30,7 @@
 
 
 <div class="container">
+
 
     <div class="row">
       <div class="col-sm-7 offset-2">
@@ -78,11 +79,11 @@
               </div>
               <div class="review-block-title">Not my favorite</div>
               <div class="review-block-description">Although the teacher was good, I thought the material was not adequate</div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div> <!-- /container -->
 
 

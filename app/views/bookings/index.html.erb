@@ -10,9 +10,9 @@
 <div class ="container col-6">
   <div class="card-product">
     <% if b.lesson.photo? %>
-          <%= cl_image_tag b.lesson.photo, width:160, height:160 %>
+    <%= cl_image_tag b.lesson.photo, width:160, height:160 %>
     <% else %>
-          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
     <% end %>
     <div class=" card-product-infos">
       <h2><%= b.lesson.name.capitalize %></h2>
@@ -26,3 +26,8 @@
   </div>
 </div>
 <% end %>
+
+<!-- Footer -->
+
+<!-- Footer -->
+

@@ -6,7 +6,8 @@ class LessonsController < ApplicationController
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @lessons = Lesson.where(sql_query, query: "%#{params[:query]}%")
     else
-      @lessons = Lesson.geocoded
+      @lessons = Lesson.all
+      @lessons.geocoded
 
       @markers = @lessons.map do |lesson|
         {
@@ -19,6 +20,8 @@ class LessonsController < ApplicationController
   end
 
   def show
+    @review = Review.new
+    @booking = Booking.where(lesson: @lesson, student: current_user).last
   end
 
   def create

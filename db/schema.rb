@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2019_11_21_155455) do
     t.decimal "price"
     t.string "location"
     t.bigint "user_tutor_id"
-    t.string "image"
     t.string "photo"
     t.float "latitude"
     t.float "longitude"

@@ -1,7 +1,6 @@
 class Review < ApplicationRecord
-  belongs_to :lesson
+  belongs_to :booking
 
   validates :name, presence: true
   validates :comment, presence: true
-  validates :stars, presence: true
 end

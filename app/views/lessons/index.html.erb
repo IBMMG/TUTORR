@@ -26,9 +26,15 @@
 <!-- offset-2 -->
 
 <div class ="container">
+  <% if @lessons.count == 1 %>
+    <h2> <%= @lessons.count  %> lesson available</h2>
+  <%  elsif @lessons. count == 0 %>
+  <h2> <%= %> </h2>
+  <% else %>
+    <h2> <%= @lessons.count  %> lessons available</h2>
+  <% end %>
 
   <% if @lessons.any? %>
-
     <div class="row">
       <div class="col-7">
         <% @lessons.each do |lesson| %>
@@ -59,7 +65,7 @@
     </div>
 
   <% else %>
-    No lessons available!
+    <p class="center-p"> No lessons available! </p>
   <% end %>
 </div>
 

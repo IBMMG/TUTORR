@@ -1,45 +1,85 @@
 <div class="container col-6 ">
   <h1>Lesson: <%= @lesson.name %> </h1>
   <div class="card-product">
-   <% if @lesson.photo? %>
+    <% if @lesson.photo? %>
           <%= cl_image_tag @lesson.photo, width:160, height:160 %>
     <% else %>
           <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
     <% end %>
- <!--    <div class="card-header">
-      Booking:
-    </div> -->
-      <div class=" card-product-infos">
-        <h2> <%= @lesson.location %> </h2>
-        <h2> <%= @lesson.price %> € </h2>
 
-        <p> <%= @lesson.description%> </p>
+    <div class=" card-product-infos">
+      <h2> <%= @lesson.location %> </h2>
+      <h2> <%= @lesson.price %> € </h2>
+
+      <p> <%= @lesson.description%> </p>
     </div>
 
     <div class="card-body  d-flex justify-content-end">
       <%= link_to 'Book now', new_lesson_booking_path(@lesson), class: "btn btn-outline-primary newbutton" %>
     </div>
-
   </div>
 
-<%= link_to 'Back to Lessons', lessons_path, class: "card-link btn btn-outline-success newbutton" %>
-
-<%= link_to 'Add a Review', new_lesson_review_path(@lesson), class: 'btn btn-outline-primary newbutton' %>
-
+  <%= link_to 'Back to Lessons', lessons_path, class: "card-link btn btn-outline-success newbutton" %>
 
 </div>
-<div class="container d-flex justify-content-center">
-<div class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </div>
-</div>
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-sm-7 offset-2">
+        <hr/>
+        <div class="review-block">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="review-block-name"><a href="#">Test</a></div>
+              <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+            </div>
+            <div class="col-sm-9">
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <div class="review-block-title">Review title</div>
+              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+            </div>
+          </div>
+          <hr/>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="review-block-name"><a href="#">Test</a></div>
+              <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+            </div>
+            <div class="col-sm-9">
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <div class="review-block-title">Review title</div>
+              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div> <!-- /container -->
+
+
+
+
 

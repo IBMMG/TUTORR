@@ -1,21 +1,28 @@
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'background.jpg' %>);">
   <div class="container ">
     <h1>Create a lesson</h1>
   </div>
 </div>
-
-<div class="container col-6">
-<p class="mt-2">
-  <%= simple_form_for [@lesson] do |l|%>
-    <%= l.input :name%>
-    <%= l.input :price%>
-    <%= l.input :location%>
-    <%= l.input :description%>
-    <%= l.input :photo %>
-    <%= l.input :photo_cache, as: :hidden %>
-    <%= l.submit class: "btn btn-primary newbutton" %>
-  <% end %>
-</p>
-<%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton" %>
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <div class="card_new_lesson">
+        <div class="card-body">
+          <p class="mt-2">
+            <%= simple_form_for [@lesson] do |l|%>
+            <%= l.input :name%>
+            <%= l.input :price%>
+            <%= l.input :location%>
+            <%= l.input :description%>
+            <%= l.input :photo %>
+            <%= l.input :photo_cache, as: :hidden %>
+            <%= l.submit class: "btn btn-primary newbutton" %>
+            <% end %>
+          </p>
+          <%= link_to 'Back to Lessons', lessons_path, class: "btn btn-outline-primary newbutton" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

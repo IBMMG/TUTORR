@@ -11,7 +11,8 @@ class LessonsController < ApplicationController
       @markers = @lessons.map do |lesson|
         {
           lat: lesson.latitude,
-          lng: lesson.longitude
+          lng: lesson.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: {lesson: lesson})
         }
       end
     end

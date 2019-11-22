@@ -26,14 +26,15 @@
 <!-- offset-2 -->
 
 <div class ="container">
-  <% if @lessons.count == 1 %>
-    <h2> <%= @lessons.count  %> lesson available</h2>
-  <%  elsif @lessons. count == 0 %>
-  <h2> <%= %> </h2>
-  <% else %>
-    <h2> <%= @lessons.count  %> lessons available</h2>
-  <% end %>
-
+  <div class ="lessoncount">
+    <% if @lessons.count == 1 %>
+      <h2> <%= @lessons.count  %> lesson available</h2>
+    <%  elsif @lessons. count == 0 %>
+    <h2> <%= %> </h2>
+    <% else %>
+      <h2> <%= @lessons.count  %> lessons available</h2>
+    <% end %>
+ </div>
   <% if @lessons.any? %>
     <div class="row">
       <div class="col-7">
@@ -57,10 +58,14 @@
           </div>
 
         <% end %>
+
+        <div class="container d-flex justify-content-center">
+          <%= link_to 'Back to homepage', root_path, class: "btn btn-outline-primary newbutton " %>
+          </div>
       </div>
 
       <div class="col-5">
-        <div id="map" style="height: 300px; width: 600px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= 'pk.eyJ1IjoiaWJtbWciLCJhIjoiY2szOGw0MWp1MDl2czNjcnRxZzJlZDB4diJ9.AcGFizvxSXA8jmm2hDFSKg' %>"></div>
+        <div id="map" style="height: 100vh; width: 600px; position: sticky; top: 0px" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= 'pk.eyJ1IjoiaWJtbWciLCJhIjoiY2szOGw0MWp1MDl2czNjcnRxZzJlZDB4diJ9.AcGFizvxSXA8jmm2hDFSKg' %>"></div>
       </div>
     </div>
 
@@ -70,7 +75,4 @@
 </div>
 
 
-<div class="container d-flex justify-content-center">
-  <%= link_to 'Back to homepage', root_path, class: "btn btn-outline-primary newbutton " %>
-  </div>
 

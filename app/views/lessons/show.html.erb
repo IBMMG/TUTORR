@@ -2,9 +2,9 @@
   <h1>Lesson: <%= @lesson.name %> </h1>
   <div class="card-product">
     <% if @lesson.photo? %>
-          <%= cl_image_tag @lesson.photo, width:160, height:160 %>
+    <%= cl_image_tag @lesson.photo, width:160, height:160 %>
     <% else %>
-          <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
+    <%= image_tag image_url("code3.jpg"), width:160, height:160 %>
     <% end %>
 
     <div class=" card-product-infos">
@@ -25,58 +25,58 @@
 
 <div class="container">
 
-    <div class="row">
-      <div class="col-sm-7 offset-2">
-        <hr/>
-        <div class="review-block">
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="review-block-name"><a href="#">Test</a></div>
-              <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
-            </div>
-            <div class="col-sm-9">
-              <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-              </div>
-              <div class="review-block-title">Review title</div>
-              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
-            </div>
+  <div class="row">
+    <div class="col-sm-7 offset-2">
+      <hr/>
+      <div class="review-block">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="review-block-name"><a href="#">Test</a></div>
+            <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
           </div>
-          <hr/>
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="review-block-name"><a href="#">Test</a></div>
-              <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+          <div class="col-sm-9">
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
             </div>
-            <div class="col-sm-9">
-              <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
-                <label for="star5" title="text">5 stars</label>
-                <input type="radio" id="star4" name="rate" value="4" />
-                <label for="star4" title="text">4 stars</label>
-                <input type="radio" id="star3" name="rate" value="3" />
-                <label for="star3" title="text">3 stars</label>
-                <input type="radio" id="star2" name="rate" value="2" />
-                <label for="star2" title="text">2 stars</label>
-                <input type="radio" id="star1" name="rate" value="1" />
-                <label for="star1" title="text">1 star</label>
-              </div>
-              <div class="review-block-title">Review title</div>
-              <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+            <div class="review-block-title">Review title</div>
+            <div class="review-block-description">Review descriptio ..... blablablablabla</div>
+          </div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="review-block-name"><a href="#">Test</a></div>
+            <div class="review-block-date">January 29, 2016<br/>1 day ago</div>
+          </div>
+          <div class="col-sm-9">
+            <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
             </div>
+            <div class="review-block-title">Review title</div>
+            <div class="review-block-description">Review descriptio ..... blablablablabla</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div> <!-- /container -->
 
 
